@@ -1,0 +1,34 @@
+\documentclass [preview, border = 20pt] {standalone}
+
+\usepackage {jack}
+\linespread {1}
+
+\begin {document}
+\pagecolor{black}
+\color{white}
+Let $A$ be a commutative ring. Let $\mathfrak a$ be an ideal of $A$. The \defn{radical} $\sqrt{\mathfrak a}$ of $\mathfrak a$ consists of the elements $\alpha\in A$ such that $\alpha^n \in \mathfrak a$ for some natural number $n$. The radical of the ideal $(0)$ is the \defn{nilradical} of $A$. We shall write
+\[
+\mathfrak N := \sqrt{(0)}.
+\]
+This is an ideal.
+
+Proof. \quad
+The element $0$ is nilpotent, so $0\in \mathfrak N$. Suppose $x,y\in \mathfrak N$. Say $x^m=y^n=0$. Then
+\begin{align*}
+(x-y)^{m+n} &= \sum_k \binom{m+n}{k}x^{k}y^{m+n-k}=0.
+\end{align*}
+So $x-y\in \mathfrak N$. Suppose $\alpha\in A$. Then 
+\begin{align*}
+(\alpha x)^m =\alpha^mx^m = 0.
+\end{align*}
+So $\alpha x\in \mathfrak N$.\hfill
+$\square$
+
+The ring $A$ is \defn{reduced} if and only if $\mathfrak N = (0)$.
+
+The nilradical is the intersection of all prime ideals of $A$:
+\[
+\mathfrak N = \bigcap_{\mathfrak p\in \Spec(A)} \mathfrak p.
+\]
+
+\end {document}

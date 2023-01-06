@@ -1,0 +1,36 @@
+\documentclass [preview, border = 20pt] {standalone}
+
+\usepackage {jack}
+\linespread {1}
+
+\begin {document}
+\pagecolor{black}
+\color{white}
+Let $n$ be an odd integer and define
+\begin{align*}
+\varepsilon(n) &\equiv \frac{n-1} 2 \pmod 2 = \begin{cases}
+0& n\equiv +1\pmod 4\\
+1&n\equiv -1 \pmod 4;
+\end{cases}\\
+\omega(n) &\equiv \frac{n^2-1} 8 \pmod 2 = \begin{cases}
+0& n\equiv \pm 1\pmod 8\\
+1&n\equiv \pm 5 \pmod 8.
+\end{cases}
+\end{align*}
+Then
+\begin{align*}
+\left( \frac 1 p \right) &= 1;\\
+\left( \frac{-1} p \right) &= (-1)^{\varepsilon(p)};\\
+\left(\frac 2 p\right) &= (-1)^{\omega(p)}.
+\end{align*}
+
+Let $\alpha$ be a primitive $8$th root of unity in an algebraic closure $\Omega$ of $\F_p$. The element $y = \alpha + \alpha\inv$ verifies $y^2 =2$ (from $\alpha^4=-1$ it follows that $\alpha^2 + \alpha^{-2} = 0$). We have
+\[
+  y^p = \alpha^p + \alpha^{-p}.
+\]
+If $p\equiv \pm 1\pmod 8$, this implies $y^p=y$, thus
+\[
+  \left(\frac 2 p\right) = y^{p-1}=1.
+\]
+If $p\equiv \pm 5\pmod 8$, one finds $y^p = \alpha^5 +\alpha^{-5} = -(\alpha+\alpha\inv) = -y$. We deduce from this that $y^{p-1}=-1$, whence the third equality follows.
+\end {document}

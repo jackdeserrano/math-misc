@@ -1,0 +1,17 @@
+\documentclass [preview, border = 20pt] {standalone}
+
+\usepackage {jack}
+\linespread {1}
+
+\begin {document}
+\pagecolor{black}
+\color{white}
+\begin{itemize}[label = ------,leftmargin = *]
+\item $\varphi(n)\in O(\psi(n))$ if and only if there exist $c,N> 0$ such that, for all $n\ge N$, \[\varphi(n)\le c\cdot \psi(n).\]
+\item $\varphi(n)\in o(\psi(n))$ if and only if there exists $N> 0$ such that, for all $c>0$ and $n\ge N$, \[\varphi(n)\le c\cdot \psi(n).\]
+\item $\varphi(n)\in \Omega(\psi(n))$ if and only if there exist $c,N> 0$ such that, for all $n\ge N$, \[c\cdot \varphi(n)\le \psi(n).\]
+\item $\varphi(n)\in \omega(\psi(n))$ if and only if there exists $N> 0$ such that, for all $c>0$ and $n\ge N$, \[c\cdot\varphi(n)\le \psi(n).\]
+\item $\varphi(n)\in \Theta(\psi(n))$ if and only if there exist $c_1,c_2,N> 0$ such that, for all $n\ge N$, \[c_1\cdot \psi(n)\le \varphi(n)\le c_2\cdot \psi(n).\]
+\end{itemize}
+
+\end {document}

@@ -1,0 +1,24 @@
+\documentclass [preview, border = 20pt] {standalone}
+
+\usepackage {jack}
+\linespread {1}
+
+\begin {document}
+\pagecolor{black}
+\color{white}
+Euler's totient function $\varphi(n)$ counts the number of positive integers less than $n$ that are prime to $n$. One has
+\[
+\varphi(n) = n \prod_{p\,\mid\,n} \left( 1-\frac 1 p\right).
+\]
+Gauss found that this multiplicative function satisfies
+\[
+\sum_{d\,\mid\,n}\varphi(d) = n.
+\]
+Euler's theorem, a generalization of Fermat's little theorem, states that, if $a$ and $n$ are relatively prime, then
+\[
+a^{\varphi(n)} \equiv 1\pmod n.
+\]
+
+\footnotesize
+See \ul{Disquisitiones arithmeticae} art. 39 p. 21.
+\end {document}

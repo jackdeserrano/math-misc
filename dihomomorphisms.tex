@@ -1,0 +1,33 @@
+\documentclass [preview, border = 20pt] {standalone}
+
+\usepackage {jack}
+\linespread {1}
+
+\begin {document}
+\pagecolor{black}
+\color{white}
+Let
+\begin{center}
+\begin{tikzcd}
+\phi : A\ar[r] & B
+\end{tikzcd}
+\end{center} 
+be a ring homomorphism. Any left $B$-module $M$ can be given the structure of a left $A$-module by setting $a\cdot m = \phi (a)\cdot m$. One denotes this $A$-module $M_{[\phi]}$.
+
+If $\Lambda$ is an $A$-module, a homomorphism
+\begin{center}
+\begin{tikzcd}
+u : \Lambda\ar[r]& M_{[\phi]}
+\end{tikzcd}
+\end{center}
+is, therefore, a homomorphism of abelian groups such that $u(a\cdot\lambda) = \phi(a)\cdot u(\lambda)$ for $a\in A$ and $\lambda\in \Lambda$. This is a \defn{$\phi$-homomorphism}
+\begin{center}
+\begin{tikzcd}
+\Lambda\ar[r] & M,
+\end{tikzcd}
+\end{center} 
+and the pair $(\phi, u)$ is a \defn{dihomomorphism} of $(A,\Lambda)$ in $(B, M)$.
+
+\footnotesize
+See EGA I 1.0.2.
+\end {document}

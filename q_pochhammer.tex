@@ -1,0 +1,33 @@
+\documentclass [preview, border = 20pt] {standalone}
+
+\usepackage {jack}
+\linespread {1}
+
+\begin {document}
+\pagecolor{black}
+\color{white}
+The \defn{$q$-Pochhammer symbol} is
+\[
+ (a;q)_n := \prod_{k=0}^{n-1} (1-aq^k).
+\]
+Euler's function is 
+\[
+ \phi (q) = (q)_\infty := \prod_k (1-q^k).
+\]
+The formal power series expansion for $1/\phi(q)$ is 
+\[
+  \frac{1}{\phi(q)} = \sum_k p(k)q^k
+\]
+where $p$ is the partition function. Euler's pentagonal number theorem states that
+\[
+  \phi(q) = \sum_{n=-\infty}^\infty (-1)^n q^{(3n^2-n)/2}.
+\]
+Ramanujan discovered the remarkable identity
+\[
+ \phi(e^{-\pi}) = \frac{e^{\pi/24}\Gamma(1/4)}{2^{7/8}\pi^{3/4}}
+\]
+and others. Also,
+\[
+  \int_0^1 \phi(q)\, dq = \frac{8\sqrt{3/23} \pi\sinh(\sqrt{23}\pi/6)}{2\cosh(\sqrt{23}\pi/3)-1}.
+\]
+\end {document}

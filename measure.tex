@@ -1,0 +1,57 @@
+\documentclass [preview, border = 20pt] {standalone}
+
+\usepackage {jack}
+\newcommand{\hrulebar}{\\\hrule\text{}\\\footnotesize}
+\linespread{1}
+\DeclareMathOperator{\length}{length}
+
+\begin {document}
+\pagecolor{black}
+\color{white}
+Let $X$ be a set. A \defn{$\sigma$-algebra} over $X$ is a non-empty collection $\mathscr{S}$ of subsets of $X$ closed under complements, countable unions, and countable intersections. The pair $(X,\mathscr{S})$ is a \defn{measurable space}.
+
+Let $(X, \mathscr{S})$ be a measurable space. Consider a function
+\begin{center}
+\begin{tikzcd}
+\mu: \mathscr{S} \ar[r]& \R\cup \{-\infty,+\infty\}.
+\end{tikzcd}
+\end{center}
+This function is a \defn{measure} if and only if
+\begin{itemize}[label = ------, leftmargin = *]
+\item for all $E\in \mathscr{S}$, $\mu(E)\ge 0$;
+\item $\mu(\emptyset)=0$;
+\item for all countable collections $(E_i)$ of pairwise disjoint sets in $\mathscr{S}$,
+\[
+  \mu\left(\bigcup_i E_i\right) = \sum_i\mu(E_i).
+\]
+\end{itemize}
+
+Suppose that $E$ has finite measure. Then,
+\[
+ \mu(E) = \mu(E\cup\emptyset) = \mu(E) + \mu(\emptyset),
+\]
+so $\mu(\emptyset) = 0$.
+
+The \defn{counting measure} is $\mu(E) := \# E$.
+
+Write $\ell(I)$ for the length of an interval $I\subset\R$. Let $E\subset \R$. One defines the \defn{Lebesgue outer measure} by
+\[
+ \lambda^*(E) := \inf\left\{ \sum_j \ell(I_j) : \textrm{$(I_j)$ is a sequence of open intervals with $E\subset \bigcup_j I_j$}\right\}.
+\]
+A subset $E\subset \R$ satisfies the \defn{Carath\'eodory criterion} if and only if, for all $A\subset \R$,
+\[
+\lambda^*(A) = \lambda^*(A\cap E) + \lambda^*(A\cap E^\complement).
+\]
+The collection
+\[
+\mathscr{S} := \{ E\subset \R: \textrm{$E$ satisfies the {Carath\'eodory criterion}}\}
+\]
+is a $\sigma$-algebra over $\R$. The \defn{Lebesgue measure} $\lambda$ is $\lambda^*\big |_{\mathscr{S}}$. This construction extends naturally to $\R^n$. A function
+\begin{center}
+\begin{tikzcd}
+f: X\ar[r]& \R
+\end{tikzcd}
+\end{center}
+is \defn{measurable} if and only if $f\inv((\alpha,\infty)) \in \mathscr{S}$ for all $\alpha\in \R$.
+
+\end {document}

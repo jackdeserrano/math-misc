@@ -1,0 +1,20 @@
+\documentclass [preview, border = 20pt] {standalone}
+
+\usepackage {jack}
+\linespread {1}
+
+\begin {document}
+\pagecolor{black}
+\color{white}
+A \defn{partition} of a positive integer $n$ is a way of writing it as a sum of positive integers. The \defn{partition function} $p(n)$ counts the number of partitions of $n$. It has the generating function
+\[
+\sum_{n=0}^\infty p(n)q^n = \prod_{j=1}^\infty \sum_{i=0}^\infty q^{ji} = \prod_{j=1}^\infty (1-q^j)^{-1},
+\]
+but it has no closed form. Ramanujan discovered
+\begin{align*}
+p(5k+4) &\equiv 0\pmod 5;\\
+p(7k+5) &\equiv 0\pmod 7;\\
+p(11k+6) &\equiv 0\pmod {11}.
+\end{align*}
+These are \defn{Ramanujan's congruences}.
+\end {document}

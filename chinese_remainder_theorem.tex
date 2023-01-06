@@ -1,0 +1,19 @@
+\documentclass [preview, border = 20pt] {standalone}
+
+\usepackage {jack}
+\linespread {1}
+
+\begin {document}
+\pagecolor{black}
+\color{white}
+Let $n_1,\hdots,n_k$ be pairwise coprime. Let $a_1,\hdots, a_k\in \Z$. The Chinese remainder theorem says that the system of congruences
+\begin{align*}
+z \equiv a_i \pmod {n_i}
+\end{align*}
+for $1\le i \le k$ has a unique solution modulo $n_1\cdots n_k$. Therefore, there is a ring isomorphism
+\begin{center}
+\begin{tikzcd}
+\displaystyle\Z/(n_1\cdots n_k)\Z \ar[r]& \displaystyle \prod_i \Z/n_i\Z.
+\end{tikzcd}
+\end{center} 
+\end {document}

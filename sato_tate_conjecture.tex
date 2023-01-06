@@ -1,0 +1,18 @@
+\documentclass [preview, border = 20pt] {standalone}
+
+\usepackage {jack}
+\linespread {1}
+
+\begin {document}
+\pagecolor{black}
+\color{white}
+Let $E$ be an elliptic curve over $\F_p$ without complex multiplication. Let $N_p$ be the number of points on $E$. Let $0\le \theta_p\le \pi$ be an angle defined as follows:
+\[
+ \cos(\theta_p) := \frac{N_p - (p+1)}{2\sqrt p}
+\]
+Mikio Sato and John Tate conjectured that, for any fixed angles $0\le\alpha\le\beta\le\pi$,
+\[
+ \lim_{n\to\infty} \frac{\#\{p\le n: \alpha\le\theta_p\le\beta\}}{\pi(n)} = \frac{2}{\pi} \int_\alpha^\beta \sin^2(s)\,ds.
+\]
+Richard Taylor's work and that of many others led to this conjecture's proof.
+\end {document}

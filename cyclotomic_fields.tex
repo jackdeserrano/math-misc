@@ -1,0 +1,51 @@
+\documentclass [preview, border = 20pt] {standalone}
+
+\usepackage {jack}
+\linespread {1}
+
+\setlength{\parskip}{1 em}
+
+\begin {document}
+\pagecolor{black}
+\color{white}
+
+\setlength{\parskip}{1 em}
+
+Recall that the \ul{splitting field} of a polynomial $\rho\in F[X]$ is the field extension $E$ of $F$ over which $\rho(X)$ factors into linear factors
+\[
+  \rho(X) = \kappa\cdot \prod_{i=1}^{\deg(\rho)}(X-c_i)
+\]
+where $\kappa\in F$ and $c_1,\hdots, c_{\deg(\rho)}$ generate $E$.
+
+Let $E$ be an extension of a field $F$. An automorphism of $E/F$ is an automorphism $\alpha$ of $E$ where $\alpha|_F$ is the identity. The set of such automorphisms forms a group denoted $\Aut(E/F)$. 
+
+The field extension $E/F$ is a \defn{Galois extension} if and only if it is normal (all irreducible polynomials over $F$ that have a root in $E$ split into linear factors in $E$) and separable (the minimal polynomial of any element of $E$ over $F$ is separable)---equivalently, $E/F$ is algebraic and the field fixed by $\Aut(E/F)$ is $F$.
+
+When $E/F$ is a Galois extension, $\Aut(E/F)$ is the \defn{Galois group} of $E/F$ and denoted $\Gal(E/F)$.
+
+The \ul{$n$th cyclotomic field} is $\mathbf{Q}(e^{2\pi i/n})$.
+
+The $n$th cyclotomic polynomial
+\[
+ \Phi(X) = \prod_{\substack{1\le k\le n\\\gcd(k,n)=1}} (X - e^{2\pi i k/n})
+\]
+is irreducible: therefore, it is the minimal polynomial of $e^{2\pi i/n}$ over $\Q$.
+
+The conjugates of $e^{2\pi i/n}$ in $\C$ are the other primitive $n$th roots of unity, so
+\[
+  [\Q(e^{2\pi i/n}):\Q] = \varphi(n).
+\]
+
+The roots of $X^n -1$ are powers of $e^{2\pi i/n}$, so $\Q(e^{2\pi i/n})$ is the splitting field of $X^n -1$ over $\Q$.
+
+The Galois group $\Gal(\Q(e^{2\pi i/n})/\Q)$ is naturally isomorphic to $(\Z/n\Z)^*$ via the map that takes $\sigma\in \Gal(\Q(e^{2\pi i/n})/\Q)$ to $\ell\in (\Z/n\Z)^*$ where $\sigma(e^{2\pi i/n}) = e^{2\pi i \ell/n}$.
+
+The ring of integers of $\Q(e^{2\pi i/n})$ is $\Z[e^{2\pi i/n}]$.
+
+The discriminant of $\Q(e^{2\pi i/n})$ is 
+\[
+\Delta_{\Q(e^{2\pi i/n})} = (-1)^{\varphi(n)/2} \frac{n^{\varphi(n)}}{\prod_{\textrm{$p$ prime dividing $n$}} p^{\varphi(n)/(p-1)}}.
+\]
+
+
+\end {document}

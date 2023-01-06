@@ -1,0 +1,44 @@
+\documentclass [preview, border = 20pt] {standalone}
+
+\usepackage {jack}
+\linespread {1}
+
+\begin {document}
+\pagecolor{black}
+\color{white}
+The gamma function is defined by
+\[
+  \Gamma(z) := \int_0^\infty s^{z-1}e^{-s}\, ds.
+\]
+It converges absolutely for $\Re(z)>0$. In particular,
+\[
+  \Gamma(n+1) = n!
+\]
+if $n$ is a positive integer, and 
+\[
+  \Gamma(z+1) = z\Gamma(z).
+\]
+
+Weierstrass demonstrated that
+\[
+  \Gamma(z) = \frac{e^{-\gamma z}}{z} \prod_{n=1}^\infty \left(1+\frac z n\right)\inv e^{z/n}
+\]
+where $\gamma$ is the Euler--Mascheroni constant. Euler’s reflection formula says that
+\[
+  \Gamma(1-z)\Gamma(z) = \frac{\pi}{\sin(\pi z)}
+\]
+if $z$ is not an integer. Euler realized that
+\[
+  \Gamma(z) = \frac{1}{z} \prod_{n=1}^\infty \left(1+\frac 1 n\right)^z \left(1+\frac z n\right)\inv.
+\]
+There is the so-called Legendre duplication formula:
+\begin{align*}
+  \Gamma(z) \Gamma(z+1/2) = 2^{1-2z}\Gamma(2z)\sqrt \pi.
+\end{align*}
+
+Further,
+\[
+  \Gamma(s/2)\zeta(s) \pi^{-s/2} = \Gamma((1-s)/2) \zeta(1-s)\pi^{(s-1)/2}
+\]
+where $\zeta$ is the Riemann zeta function.
+\end {document}

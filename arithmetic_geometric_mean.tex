@@ -1,0 +1,63 @@
+\documentclass[preview, border=16pt]{standalone}
+
+\usepackage [] {jack}
+\newcommand{\hrulebar}{\\\hrule\text{}\\\footnotesize}
+\linespread{1}
+
+\begin{document}
+\pagecolor{black}
+\color{white}
+Suppose $\alpha$ and $\beta$ are positive real numbers. Define $\alpha_0 := \alpha$ and $\beta_0=\beta$. Inductively, define
+\begin{align*}
+\alpha_{n+1} &:= \frac{1}{2}(\alpha_n + \beta_n);\\
+\beta_{n+1} &:= \sqrt{\alpha_n\beta_n}.
+\end{align*}
+The induced sequences $(\alpha_n)$ and $(\beta_n)$ converge to the \defn{arithmetic-geometric mean} of $\alpha$ and $\beta$, which one notates $\agm (\alpha,\beta)$.
+
+Theorem.\quad
+If $\alpha\ge\beta>0$, then
+\[
+\agm (\alpha,\beta) \int_0^{\pi/2} (\alpha^2\cos^2(\phi) + \beta^2\sin^2(\phi))^{-1/2}\,d\phi = \frac{\pi}{2}.
+\]
+Proof.\quad
+Define
+\[
+\II(\alpha,\beta) := \int_0^{\pi/2} (\alpha^2\cos^2(\phi) + \beta^2\sin^2(\phi))^{-1/2}\,d\phi
+\]
+and define $\tilde\phi$ such that
+\[
+\sin (\phi) = \frac{2\alpha\sin( \tilde \phi)}{\alpha+\beta+(\alpha-\beta)\sin^2(\tilde\phi)}.
+\]
+Notice that
+\begin{align*}
+\cos (\phi) &= \frac{2\cos(\tilde \phi)(\alpha_1^2 \cos^2(\tilde\phi) + \beta_1^2 \sin^2(\tilde \phi))^{1/2}}{\alpha+\beta+(\alpha-\beta)\sin^2(\tilde \phi)};\\
+(\alpha^2\cos^2(\phi) + \beta^2\sin^2(\phi))^{1/2} &= \alpha\frac{\alpha+\beta-(\alpha-\beta)\sin^2(\tilde\phi)}{\alpha+\beta+(\alpha-\beta)\sin^2(\tilde\phi)}.
+\end{align*}
+Therefore,
+\[
+(\alpha^2\cos^2(\phi) + \beta^2\sin^2(\phi))^{-1/2}\,d\phi = (\alpha_1^2\cos^2(\tilde\phi) + \beta_1^2 \sin^2(\tilde\phi))^{-1/2}\, d\tilde \phi,
+\]
+whence $\II(\alpha,\beta) = \II(\alpha_1,\beta_1)$ follows.
+Now, one sees that
+\[
+\II(\alpha,\beta) = \II(\alpha_1,\beta_1) = \cdots,
+\]
+so
+\[
+\II(\alpha,\beta) = \lim_{n\to\infty} \II(\alpha_n,\beta_n) = \frac{\pi}{2\agm (\alpha,\beta)}
+\]
+since $(\alpha_n^2\cos^2(\phi) + \beta_n^2\sin^2(\phi))^{-1/2}$ converges uniformly to $\agm (\alpha,\beta)\inv$.\hfill 
+$\square$
+
+Gauss proved that 
+\[
+\agm (1,\sqrt{2}) = \frac{\pi}{\varpi} \approx 1.19814
+\]
+where $\varpi$ is the \defn{lemniscate constant}:
+\[
+\varpi := 2\int_{0}^1\frac{ds}{\sqrt{1-s^4}}\approx 2.62206.
+\]
+
+\footnotesize
+See \underline{Werke} (Gauss) III p. 352 and \underline{Gesammelte Werke} (Jacobi) I p. 152.
+\end{document}

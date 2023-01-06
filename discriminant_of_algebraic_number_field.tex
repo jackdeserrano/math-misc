@@ -1,0 +1,45 @@
+\documentclass [preview, border = 20pt] {standalone}
+
+\usepackage {jack}
+\linespread {1}
+
+\setlength{\parskip}{1 em}
+
+\begin {document}
+\pagecolor{black}
+\color{white}
+
+\setlength{\parskip}{1 em}
+
+Let $\Omega$ be an algebraic number field. Let $O_\Omega$ be its ring of integers. 
+
+Let $\pp$ be a prime ideal of $ O_\Omega$. Given a field extension $L/\Omega$, one can consider the ring of integers $ O_L$ and the ideal $\pp O_L$ of $ O_L$. For $[L:\Omega]<+\infty$, there is a decomposition
+\[
+\pp  O_L = \pp_1^{e_1} \cdots \pp_k^{e_k}
+\]
+where $\pp_i$ is a prime ideal of $ O_L$ and $\pp_i\ne \pp_j$ for $i\ne j$. The prime ideal $\pp$ \defn{ramifies} if and only if $e_i>1$ for some $i$. 
+
+Let $\{b_1,\hdots,b_n\}$ be an integral basis of $ O_\Omega$ and let $\{\sigma_1,\hdots,\sigma_n\}$ be the set of injective ring homomorphisms
+\begin{center}
+\begin{tikzcd}
+\Omega\ar[r]& \C.
+\end{tikzcd}
+\end{center}
+The \defn{discriminant} of $\Omega$ is
+\[
+\Delta_\Omega = \det(\sigma_i(b_j)).
+\]
+
+Let $d\in \Z$ be square-free. Then,
+\[
+\Delta_{\Q(\sqrt d)} = \begin{cases}
+d&{d\equiv 1\pmod 4}\\ 4d & d\equiv 2,3\pmod 4.
+\end{cases}
+\]
+The discriminant of the $n$th cyclotomic field is 
+\[
+\Delta_{\Q(e^{2\pi i/n})} = (-1)^{\varphi(n)/2} \frac{n^{\varphi(n)}}{\prod_{\textrm{$p$ prime dividing $n$}} p^{\varphi(n)/(p-1)}}.
+\]
+
+The prime $(p)$ ramifies in $\Omega$ if and only if $p$ divides $\Delta_\Omega$.
+\end {document}

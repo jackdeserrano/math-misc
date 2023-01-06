@@ -1,0 +1,24 @@
+\documentclass [preview, border = 20pt] {standalone}
+
+\usepackage {jack}
+\linespread {1}
+
+\begin {document}
+\pagecolor{black}
+\color{white}
+Let $p$ and $q$ be two distinct odd prime numbers. Recall:
+\[
+\left( \frac q p\right) = \begin{cases}
+  +1 & \textrm{$q$ is a quadratic residue modulo $p$}\\
+  -1 & \textrm{otherwise.}
+\end{cases}
+\]
+The law of quadratic reciprocity says that
+\[
+\left( \frac p q\right)\left( \frac q p\right) = (-1)^{(p-1)(q-1)/4}.
+\]
+Gauss first proved it. 
+
+\footnotesize
+See \ul{Disquisitiones arithmeticae} \S 4 arts. 107--50 and pp. 6--10 of Serre's \ul{A course in arithmetic}.
+\end {document}
