@@ -1,0 +1,89 @@
+\documentclass [preview, border = 20pt] {standalone}
+
+
+
+\usepackage {jack}
+\linespread {1}
+
+\let\Re\relax
+\DeclareMathOperator{\Re}{Re}
+
+\begin {document}
+\pagecolor{black}
+\color{white}
+
+\setlength{\parskip}{1 em}
+
+Recall that a function
+\begin{center}
+\begin{tikzcd}
+\chi : \Z\ar[r] &\C
+\end{tikzcd}
+\end{center}
+is a Dirichlet character (modulo $\mu$) if and only if
+\begin{itemize}
+\item $\chi(\alpha\beta) =\chi(\alpha)\chi(\beta)$;
+\item $\chi(\alpha) = 0$ if and only if $\gcd(\alpha,\mu) >1$;
+\item $\chi$ is $\mu$-periodic.
+\end{itemize}
+
+
+Given a Dirichlet character $\chi$, the associated Dirichlet $L$-function is the function
+\[
+L(s,\chi)  = \sum_{n=1}^\infty \frac{\chi(n)}{n^s}
+\]
+extended to $\C$ via analytic continuation.
+
+\iffalse
+Dirichlet $L$-functions have an Euler product 
+\[
+L(s,\chi) = \prod_{\textrm{prime numbers $p$}} (1- \chi(p)p^{-s})^{-1}
+\]
+for $\operatorname{Re}(s)>1$.
+\fi
+
+Suppose that $\chi$ is a primitive character modulo $q$. Write 
+\[
+\tau(\chi) = \sum_{n=1}^q \chi(n)\exp(2\pi i n/q).
+\]
+Also write
+\[
+a = \begin{cases}
+ 0 & \chi(-1)=1\\
+ 1 & \chi(-1)=-1
+ \end{cases}
+\]
+and 
+\[
+\varepsilon(\chi) = \frac{\tau(\chi)}{i^a\sqrt q}.
+\]
+Then, $L(s,\chi)$ satisfies the functional equation
+\[
+L(s,\chi) = \varepsilon(\chi) 2^s\pi^{s-1}q^{1/2-s} \sin \left(\frac{\pi}{2}(s+a)\right)\Gamma(1-s)L(1-s,\overline{\chi}).
+\]
+
+More generally, given a sequence of complex numbers $(a_n)$, the associated $L$-series is the series
+\[
+\sum_{n=1}^\infty \frac{a_n}{n^s}.
+\]
+Then, one can determine whether this converges on some right half-plane of $\C$ and only thereafter determine whether it can be analytically continued to a meromorphic function on $\C$, which is the $L$-function associated to $(a_n)$.
+
+Recall the definition for Ramanujan's $\tau$ function:
+\[
+\sum _{n=1}^\infty \tau(n) q^n = q\prod_{n=1}^\infty (1-q^n)^{24} = \Delta(z).
+\]
+This gives Ramanujan's $L$-function: for $\operatorname{Re}(s)>6$,
+\[
+L\sub{Ram}(s) = \sum_{n=1}^\infty \frac{\tau(n)}{n^s},
+\]
+and otherwise $L\sub{Ram}$ is defined by analytic continuation. It satisfies the functional equation
+\[
+L\sub{Ram}(s)\Gamma(s) (2\pi)^{-s} = L\sub{Ram}(12-s)\Gamma(12-s) (2\pi)^{-(12-s)}
+\]
+for almost all $s$ and has the Euler product
+\[
+L(s) = \prod_{\textrm{prime numbers}} \frac{1}{1-\tau(p)p^{-s} + p^{11-2s}}
+\]
+for $\operatorname{Re}(s)>7$.
+Ramanujan conjectured that all non-trivial zeros of $L\sub{Ram}$ have real part $6$.
+\end {document}
