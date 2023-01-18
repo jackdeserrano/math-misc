@@ -1,0 +1,65 @@
+\documentclass [preview, border = 20pt] {standalone}
+
+
+
+\usepackage {jack}
+\linespread {1}
+
+
+\begin {document}
+\pagecolor{black}
+\color{white}
+
+\setlength{\parskip}{1 em}
+
+Let $V$ be a vector space over a field $F$. Let $G$ be a group.
+
+The \defn{general linear group} $\GL(V)$ of $V$ is the group of automorphisms (bijective linear transformations) of $V$.
+
+A \defn{representation} of $G$ on $V$ is a group homomorphism
+\begin{center}
+\begin{tikzcd}
+\rho :G\ar[r]&\GL(V)
+\end{tikzcd}
+\end{center}
+and the vector space $V$. The \defn{dimension} of $(\rho, V)$ is
+\[
+\dim(\rho) := \dim(V).
+\]
+
+The representation $\rho$ is \defn{faithful} if and only if $\Ker(\rho)$ is the trivial group. 
+
+A \defn{sub-representation} of a representation $(\rho, V)$ of $G$ is a representation $(\rho\big|_W, W)$ of $G$ where $W$ is a sub-space of $V$ and $(\rho\big|_W)(g) = \rho(g)\big |_W$.
+
+A representation $(\rho, V)$ of $G$ is \defn{irreducible} if and only if it has precisely two sub-representations: $(\rho,(0))$ and $(\rho,V)$.
+
+Suppose that $V$ is finite-dimensional over $F$. Let $(\rho, V)$ be a representation of $G$. The \defn{character} of $(\rho, V)$ is the function
+\begin{center}
+\begin{tikzcd}
+\chi_\rho :G\ar[r]&F
+\end{tikzcd}
+\end{center}
+given by
+\[
+\chi_\rho(g) := \Tr(\rho(g)).
+\]
+The character $\chi_\rho$ is \defn{irreducible} if and only if $(\rho, V)$ is irreducible. 
+
+The \defn{degree} of the character $\chi_\rho$ is
+\[
+\deg(\chi_\rho) := \dim(\rho).
+\]
+Notice that, in characteristic zero,
+\[
+\deg(\chi_\rho) = \chi_\rho(1).
+\]
+Furthermore,
+\begin{itemize}[topsep = 0 em, itemsep = 0 em]
+\item $\chi_{\rho\oplus\sigma} = \chi_{\rho} + \chi_{\sigma}$;
+\item $\chi_{\rho\otimes\sigma} = \chi_{\rho} \cdot \chi_{\sigma}$;
+\item $\chi_{\rho^*} = \overline{\chi_{\rho}}$;
+\end{itemize}
+where $\rho^*$ is the conjugate transpose of $\rho$.
+
+Add definitions of direct sum, tensor product, and conjugate transpose, Frobenius reciprocity, etc.
+\end {document}
