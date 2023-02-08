@@ -16,7 +16,7 @@ that is surjective and whose kernel is $p^{n-1}A_n$.
 
 The sequence
 \begin{center}
-\begin{tikzcd}
+\begin{tikzcd}[sep = 4 em]
 \cdots \ar[r]& A_{n+1} \ar[r, "\phi_n"] & A_n\ar[r] &\cdots\ar[r] & A_2 \ar[r, "\phi_1"] & A_1
 \end{tikzcd}
 \end{center} 
@@ -26,7 +26,13 @@ The ring of $p$-adic integers $\Z_p$ is the projective limit of the system $(A_n
 
 By definition, an element of 
 \[
-\Z_p = \varprojlim (A_n,\phi_n)
+\Z_p := \varprojlim (A_n,\phi_n)
 \]
-is a sequence $z = (\hdots, z_n,\hdots, z_1)$ with $z_n\in A_n$ and $\phi_n(z_n) = z_{n-1}$ if $n\ge 2$. Addition and multiplication in $\Z_p$ are defined ``coordinate by coordinate.'' That is, $\Z_p$ is a subring of the product $\prod_n A_n$. If we give $A_n$ the discrete topology and $\prod_n A_n$ the product topology, the ring $\Z_p$ inherits a topology that makes it a compact space, since it is closed in a product of compact spaces.
+is a sequence $z = (\hdots, z_n,\hdots, z_1)$ with $z_n\in A_n$ and $\phi_n(z_n) = z_{n-1}$ if $n\ge 2$.
+
+Addition and multiplication in $\Z_p$ are defined ``coordinate by coordinate.'' That is, $\Z_p$ is a subring of the product 
+\[
+ \prod_{n\in\N} \Z/p^n\Z.
+\] 
+If we give $\Z/p^n\Z$ the discrete topology and the above product the product topology, the ring $\Z_p$ inherits a topology that makes it a compact space, since it is closed in a product of compact spaces.
 \end {document}
